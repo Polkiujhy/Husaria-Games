@@ -1,0 +1,237 @@
+.CSSgal {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Or set a fixed height */
+}
+
+/* SLIDER */
+
+.CSSgal .slider {
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+  transition: 0.8s;
+  img{
+    width: 50%;
+    height: 100%;
+}
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+  font-size: 1rem;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  width: 100%;
+  background: none 50% no-repeat;
+  background-size: cover;
+
+}
+.CSSgal .img1{
+
+    img{
+        width: 50%;
+        height: 110%;
+        max-width: 100%;
+
+    }
+}
+.CSSgal .img2{
+
+    img{
+        text-align: center;
+    }
+}
+.CSSgal .img3{
+
+    img{
+
+
+        margin-top:50px;
+        text-align: center;
+        width: 40%;
+    }
+}
+.CSSgal .img4{
+
+    img{
+
+
+        margin-top:75px;
+        width: 50%;
+        height: 50%;
+        text-align: center;
+    }
+}
+.CSSgal .img5{
+
+    img{
+
+
+        text-align: center;
+        width: 70%;
+    }
+}
+.CSSgal .img6{
+
+    img{
+
+
+        text-align: center;
+    }
+}
+.CSSgal, .img1, .img2, .img3, .img4, .img5, .img6{
+    img{
+    max-width: 100%;
+    right: 30%;
+    }
+}
+.CSSgal .imgbackground{
+    img{
+        position:absolute;
+        margin: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+}
+
+
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+  position: absolute;
+  top: 50%;
+  width: 60%;
+  margin-left: 20%;
+  height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+  visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+  background: #fff;
+  position: absolute;
+  width:       60px;
+  height:      60px;
+  line-height: 60px; /* If you want to place numbers */
+  opacity: 0.3;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+}
+.CSSgal .prevNext a:hover {
+  opacity: 1;
+}
+.CSSgal .prevNext a+a {
+  left: auto;
+  right: 0;
+  b{
+    right: -5px;
+  }
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+.CSSgal .bullets > a {
+  display: inline-block;
+  width:       10px;
+  height:      10px;
+  line-height: 10px;
+  font-size: 5px;
+  text-decoration: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+}
+.CSSgal .bullets > a:hover {
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+#s5:target ~ .bullets >*:nth-child(5) {background: rgba(255, 255, 255,   1);}
+#s6:target ~ .bullets >*:nth-child(6) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+#s5:target ~ .prevNext >*:nth-child(5) {visibility: visible;}
+#s6:target ~ .prevNext >*:nth-child(6) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+#s5:target ~ .slider {transform: translateX(-400%); -webkit-transform: translateX(-400%);}
+#s6:target ~ .slider {transform: translateX(-500%); -webkit-transform: translateX(-500%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER!
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+
+.CSSgal{
+  text-align: center;
+}
+.CSSgal a {
+  border-radius: 50%;
+  margin: 0 3px;
+  color: rgba(0,0,0,0.8);
+  text-decoration: none;
+  font-size: 5rem;
+  b{
+    position: inherit;
+    width: 100%;
+    height: 100%;
+    bottom:0.9vh;
+    right: 0px;
+  }
+}
+.Galtop{
+    position: fixed;;
+
+}
+@media(max-width: 1140px){
+    .CSSgal{
+    height: 300px;
+
+    }
+}

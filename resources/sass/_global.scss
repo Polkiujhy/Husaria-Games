@@ -1,0 +1,103 @@
+// Global styling for this template
+
+html,
+body {
+  height: 100%;
+  color: antiquewhite;
+  font-family: 'MyWebFont';
+  scroll-behavior: smooth;
+  width: 100%;
+  background-image: linear-gradient(to top, $light_green 0%,$blue_green 50%,$dark_blue 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-transform: uppercase;
+
+}
+
+// Set spacing on containers for page symmetry
+
+.container,
+.container-fluid {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+  padding-top: $grid-gutter-height;
+}
+a{
+    text-decoration: none;
+    color: antiquewhite;
+    &:hover{
+        color: antiquewhite;
+    }
+}
+table{
+    min-width: 200px;
+    min-height: 50px;
+    letter-spacing: 0.1rem;
+
+    th{
+        padding-right: 15px;
+        font-size: 40px;
+    }
+    td{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 23px;
+    }
+}
+@keyframes myAnimation{
+    0%{
+      opacity: 1;
+      transform: rotateX(90deg);
+    }
+    50%{
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+    100%{
+      display: none;
+      opacity: 0;
+      transform: rotateX(90deg);
+    }
+  }
+
+  #alert{
+      animation-name: myAnimation;
+      animation-duration: 2000ms;
+      animation-fill-mode: forwards;
+  }
+
+  @media (max-width: 1140px){
+    html{
+    width: 100%;
+    font-size: 0.5rem;
+    }
+    body{
+        width: 100%;
+    }
+    #layoutMain_menu{
+        width: 98%;
+        padding-left: 3%;
+    }
+    table th{
+        margin: 0;
+        font-size: 0;
+    }
+
+
+}
+.footer{
+    padding-bottom: 20px;
+    background-color: $dark_purple;
+    box-shadow: 0 0 10px 10px #091c1d;
+
+}
+.py-4{
+    padding-bottom: 0 !important;
+    color: antiquewhite;
+    position: static;
+    width: 100%;
+
+}
+.nav-link{
+    color: black;
+}

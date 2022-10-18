@@ -1,0 +1,551 @@
+
+
+
+body {
+    position: relative;
+	font-weight: 300;
+	font-size: 3rem;
+	line-height: 1.9rem;
+    z-index: -2;
+}
+
+.layout-wrapper {
+	display: grid;
+	grid-auto-rows: minmax(150px, auto);
+	grid-auto-flow: row dense;
+	grid-gap: 1em;
+	break-inside: avoid;
+    margin-top: 20vh;
+    margin-bottom: 1vh;
+}
+.page-header{
+
+
+    img{
+        max-width: 100%;
+
+    }
+    #contact-main-img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    #contact-main-text{
+        font-size: 40px;
+    }
+}
+.page-sub {
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
+.subhead-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+    h2{
+        line-height: 3.5rem;
+    }
+
+}
+.cover-wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+}
+.cover-wrapper-contact {
+	display: flex;
+	flex-flow: column nowrap;
+    justify-content: center;
+	object-fit: contain;
+    margin-top: $topnav-base-height;
+    margin-bottom: 10vh;
+}
+
+.article-tags {
+	display: flex;
+	justify-content: center;
+	padding: 1rem 0;
+}
+
+.headline,
+.subhead,
+.article-meta,
+aside,
+h2 {
+	text-transform: uppercase;
+
+}
+
+figure,
+img {
+	width: 100%;
+	max-width: 37.5rem;
+}
+
+figure {
+	position: relative;
+    margin: 0 auto;
+}
+
+img {
+	position: flex;
+	text-align: center;
+	object-fit: contain;
+}
+
+figcaption {
+	position: absolute;
+	font-size: 0.65rem;
+	text-transform: uppercase;
+	bottom: 0.75rem;
+	left: 2.75rem;
+	padding: 0.25rem;
+}
+
+.subhead-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.subhead,
+h2 {
+	font-weight: 700;
+	font-size: 6rem;
+	line-height: 3rem;
+
+}
+
+h2 {
+	text-align: left;
+}
+
+.subhead {
+	text-align: center;
+}
+
+.article-meta {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	font-weight: 900;
+	font-size: 0.8rem;
+	margin: 0.75rem 0.5rem;
+}
+
+#author-avatar {
+	height: 2rem;
+	float: left;
+}
+
+.second-heading {
+	margin-top: 3rem;
+}
+
+aside {
+	padding: 0rem 3rem 0 3rem;
+	font-size: 3.25rem;
+	line-height: 3.25rem;
+	text-align: center;
+}
+
+.full-width-span {
+	grid-column: span 2;
+	margin: 0;
+}
+
+.section-1 > p,
+.section-2 > p,
+.section-3 > p,
+.section-4 > p {
+	padding-top: 1rem;
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+.section-5,
+.page-header {
+    box-shadow: 0px 0px 10px 10px #091c1d;
+}
+
+.section-1{
+    padding: 3rem;
+	columns: 1 600px;
+	column-gap: 4em;
+	column-fill: none;
+}
+
+.section-2,
+.section-3 {
+	padding: 3rem;
+	columns: 2 600px;
+	column-gap: 4em;
+	column-fill: none;
+}
+.section-4{
+    margin-top: 50px;
+    columns: 1 270px;
+    text-align: center;
+    h2{
+        background-color: #091c1d;
+        box-shadow: 0px 5px 10px 30px #091c1d;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-left: 10px;
+        margin-right: 10px;
+        a{
+            color:black;
+        }
+    }
+}
+.section-5{
+    margin-top: 50px;
+    columns: 1 270px;
+    text-align: center;
+    h2{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-left: 10px;
+        margin-right: 10px;
+        a{
+            color:black;
+        }
+    }
+}
+
+
+.section-3 > p:last-of-type {
+	margin-bottom: 3rem;
+}
+
+.byline,
+.dateline {
+	padding-right: 1rem;
+}
+
+.tag {
+	margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+    font-size: 6rem;
+    line-height: 3rem;
+
+	/* needed to center text due to below featured border */
+
+}
+.card-header{
+    padding:20px;
+    margin:20px;
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+    background-color: rgba(0, 0, 0, 0.23);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.first-paragraph::first-letter {
+	font-size: 10rem;
+	padding: 1rem;
+	margin-right: 0.25rem;
+	float: left;
+	font-weight: 900;
+}
+
+@media (max-width: 61rem) {
+	.layout-wrapper {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+
+	.headline {
+		font-size: 13vw;
+		line-height: 8vw;
+	}
+
+	.tag {
+		padding: 0.5rem;
+		margin: 0.5rem;
+	}
+
+	.page-sub {
+		padding: 0.5rem;
+	}
+
+	aside {
+		font-size: 8vw;
+		line-height: 8vw;
+	}
+
+	.section-2,
+	.section-3 {
+		padding: 0 3rem;
+	}
+
+	figure,
+	img {
+		max-width: 100%;
+	}
+
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+button[type=submit] {
+    padding: 12px 20px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+button[type=radio]{
+    padding: 12px 20px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+body
+    {
+        padding: 0;
+    }
+
+    textarea
+    {
+        min-height: 200px;
+    }
+
+    table tr td
+    {
+        white-space: nowrap;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .deleted
+    {
+        opacity: 0.65;
+    }
+
+    #main
+    {
+        min-height: 100%;
+        padding: 2em;
+    }
+
+    .shadow-sm
+    {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+
+    .card.category
+    {
+        margin-bottom: 1em;
+    }
+
+    .list-group .list-group
+    {
+        min-height: 1em;
+        margin-top: 1em;
+    }
+
+    .btn svg.feather
+    {
+        width: 16px;
+        height: 16px;
+        stroke-width: 3px;
+        vertical-align: -2px;
+    }
+    .btn-close{
+        box-sizing: unset;
+        padding: 0;
+    }
+
+    .modal-title svg.feather
+    {
+        margin-right: .5em;
+        vertical-align: -3px;
+    }
+
+    .category .subcategories
+    {
+        background: #fff;
+    }
+
+    .category > .list-group-item
+    {
+        z-index: 1000;
+    }
+
+    .category .subcategories .list-group-item:first-child
+    {
+        border-radius: 0;
+    }
+
+    .timestamp
+    {
+        border-bottom: 1px dotted var(--gray);
+        cursor: help;
+    }
+
+    .fixed-bottom-right
+    {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+
+    .fade-enter-active, .fade-leave-active
+    {
+        transition: opacity .3s;
+    }
+    .fade-enter, .fade-leave-to
+    {
+        opacity: 0;
+    }
+
+    .mask
+    {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(50, 50, 50, .2);
+        opacity: 0;
+        transition: opacity .2s ease;
+        z-index: 1020;
+    }
+    .mask.show
+    {
+        opacity: 1;
+    }
+
+    .form-check
+    {
+        user-select: none;
+    }
+
+    .sortable-chosen
+    {
+        background: var(--light);
+    }
+
+
+
+
+
+.center{
+    display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	object-fit: contain;
+
+}
+.section-4 img{
+min-height: 600px;
+}
+
+
+#paypal-button-container-Woodcutter,
+#paypal-button-container-Space,
+#paypal-button-container-Space-Shooter,
+#paypal-button-container-Arkona,
+#paypal-button-container-Cyber-City,
+#paypal-button-container-Pixel-Monsters{
+ display: none;
+}
+
+#paypal-button-container-Woodcutter-COMPLETED,
+#paypal-button-container-Space-COMPLETED,
+#paypal-button-container-Space-Shooter-COMPLETED,
+#paypal-button-container-Arkona-COMPLETED,
+#paypal-button-container-Cyber-City-COMPLETED,
+#paypal-button-container-Pixel-Monsters-COMPLETED{
+ display: block;
+ a{
+    color: black;
+ }
+}
+.container{
+    margin-top: 95px;
+    min-height: 100%;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 575.98px)
+  {
+      #main
+      {
+          padding: 1em;
+      }
+  }

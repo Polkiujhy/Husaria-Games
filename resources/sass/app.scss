@@ -1,0 +1,30 @@
+// Fonts
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('E://laravel/app/public/images/FONT_GAME.ttf');
+}
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+// Global
+@import 'global';
+@import 'admin';
+//layouts
+@import 'content/page';
+@import 'layout/dashboard-default';
+@import 'layout/error';
+@import 'layout/slideshow';
+
+//Navigation
+@import 'navigation/topnav';
+@import 'variables/navigation';
+//Spacing
+@import 'variables/spacing';
+
